@@ -1,0 +1,36 @@
+<module>
+	<rawname>fax</rawname>
+	<repo>standard</repo>
+	<name>Fax Configuration</name>
+	<version>2.11.0.2</version>
+	<publisher>Schmoozecom.com</publisher>
+	<license>GPLv2+</license>
+	<category>Settings</category>
+	<menuitems>
+		<fax>Fax Configuration</fax>
+	</menuitems>
+	<description>Adds configurations, options and GUI for inbound faxing</description>
+	<changelog>
+		*2.11.0.2* #6810
+		*2.11.0.1* #6647, #6556
+		*2.11.0.0* bump version
+		*2.10.0.6* re #5906 - workaround for php &lt; 5.2 
+		*2.10.0.5* minor code cleanup
+		*2.10.0.4* assotred bug fixes 
+		*2.10.0.3* re #5707 - allow posted values to show on page; minor costmetics towards moving to a proper view 
+		*2.10.0.2* #5478 
+		*2.10.0.1* incorrect path to system conversion script
+		*2.10.0.0* new version changes
+		*2.9.0.5* #5029
+		*2.9.0.4* #5000
+		*2.9.0.3* #4886 additional
+		*2.9.0.2* #4886, #4907
+		*2.9.0.1* removed duplicate functions
+		*2.9.0.0* #4562, #4326, #4557, #4632, #4651, #4653
+	</changelog>
+	<depends>
+		<version>2.7.0beta1</version>
+	</depends>
+	<location>release/2.11/fax-2.11.0.1.tgz</location>
+	<md5sum>91f4b1a2991b438be4c9e9c87d8e8a8a</md5sum>
+</module>
