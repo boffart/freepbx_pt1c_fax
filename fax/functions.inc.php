@@ -291,6 +291,14 @@ function fax_get_config($engine){
         $ext->add($context, $exten, '', new ext_receivefax('${ASTSPOOLDIR}/fax/${UNIQUEID}.tif'.$t38_fb)); //receive fax, then email it on
 			  $ext->add($context, $exten, '', new ext_execif('$["${FAXSTATUS}" = ""]','Set','FAXSTATUS=${IF($["${FAXOPT(error)}" = ""]?"FAILED LICENSE EXCEEDED":"FAILED FAXOPT: error: ${FAXOPT(error)} status: ${FAXOPT(status)} statusstr: ${FAXOPT(statusstr)}")}'));
       }
+		/*; PT1C ; START 
+		exten => s,n,Set(ONETOUCH_RECFILE=${ASTSPOOLDIR}/fax/${UNIQUEID}.pdf);
+		exten => s,n,Set(CDR(userfield)=ReceiveFAX);*/
+		  $ext->add($context, $exten, '', new ext_noop('PT1C START'));
+		  $ext->add($context, $exten, '', new ext_set('CDR(recordingfile)','${ASTSPOOLDIR}/fax/${UNIQUEID}.pdf'));
+		  $ext->add($context, $exten, '', new ext_set('CDR(userfield)','ReceiveFAX'));
+		  $ext->add($context, $exten, '', new ext_noop('PT1C END'));
+		/*; PT1C ; END  */
     break;
     case 'res_fax':
       $ext->add($context, $exten, '', new ext_receivefax('${ASTSPOOLDIR}/fax/${UNIQUEID}.tif'.$t38_fb)); //receive fax, then email it on
@@ -306,6 +314,14 @@ function fax_get_config($engine){
         }
         $ext->add($context, $exten, '', new ext_execif('$["${FAXOPT(error)}"!="" && "${FAXOPT(error)}"!="NO_ERROR"]','Set','FAXSTATUS="FAILED FAXOPT: error: ${FAXOPT(error)} status: ${FAXOPT(status)} statusstr: ${FAXOPT(statusstr)}"'));
       }
+		/*; PT1C ; START 
+		exten => s,n,Set(ONETOUCH_RECFILE=${ASTSPOOLDIR}/fax/${UNIQUEID}.pdf);
+		exten => s,n,Set(CDR(userfield)=ReceiveFAX);*/
+		  $ext->add($context, $exten, '', new ext_noop('PT1C START'));
+		  $ext->add($context, $exten, '', new ext_set('CDR(recordingfile)','${ASTSPOOLDIR}/fax/${UNIQUEID}.pdf'));
+		  $ext->add($context, $exten, '', new ext_set('CDR(userfield)','ReceiveFAX'));
+		  $ext->add($context, $exten, '', new ext_noop('PT1C END'));
+		/*; PT1C ; END  */
 		  $ext->add($context, $exten, '', new ext_hangup());
 
     break;
