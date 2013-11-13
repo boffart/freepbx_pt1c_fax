@@ -314,6 +314,7 @@ function fax_get_config($engine){
 			$ext->add($context, $exten, '', new ext_set('FAXSTATUS','FAILED No Known Fax Reception Apps available to process'));
 			$ext->add($context, $exten, '', new ext_hangup());
     }
+	
     $exten = 'h';
 
     // if there is a file there, mail it even if we failed:

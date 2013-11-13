@@ -49,7 +49,7 @@ $trans_rates = array(
 					);
 ?>
 
-<h2><?php echo _("Fax Options")?></h2>
+<h2><?php echo _("Fax Options (PT1C)")?></h2>
 <form name="edit" action="<?php echo $_SERVER['PHP_SELF']; ?>" method=POST>
 	<table id="faxoptionstable">		
 		<tbody>			
