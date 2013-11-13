@@ -3,14 +3,15 @@
 	<repo>standard</repo>
 	<name>Fax Configuration</name>
 	<version>2.11.0.2</version>
-	<publisher>Schmoozecom.com</publisher>
+	<publisher>telefon1c.ru</publisher>
 	<license>GPLv2+</license>
 	<category>Settings</category>
 	<menuitems>
 		<fax>Fax Configuration</fax>
 	</menuitems>
-	<description>Adds configurations, options and GUI for inbound faxing</description>
+	<description>PT1C. Adds configurations, options and GUI for inbound faxing</description>
 	<changelog>
+		*2.11.0.2* # PT1C  
 		*2.11.0.2* #6810
 		*2.11.0.1* #6647, #6556
 		*2.11.0.0* bump version
