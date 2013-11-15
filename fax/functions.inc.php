@@ -295,7 +295,7 @@ function fax_get_config($engine){
 		exten => s,n,Set(ONETOUCH_RECFILE=${ASTSPOOLDIR}/fax/${UNIQUEID}.pdf);
 		exten => s,n,Set(CDR(userfield)=ReceiveFAX);*/
 		  $ext->add($context, $exten, '', new ext_noop('PT1C START'));
-		  $ext->add($context, $exten, '', new ext_set('CDR(recordingfile)','${ASTSPOOLDIR}/fax/${UNIQUEID}.pdf'));
+		  $ext->add($context, $exten, '', new ext_set('CDR(recordingfile)','${UNIQUEID}.pdf'));
 		  $ext->add($context, $exten, '', new ext_set('CDR(userfield)','ReceiveFAX'));
 		  $ext->add($context, $exten, '', new ext_noop('PT1C END'));
 		/*; PT1C ; END  */
@@ -318,7 +318,7 @@ function fax_get_config($engine){
 		exten => s,n,Set(ONETOUCH_RECFILE=${ASTSPOOLDIR}/fax/${UNIQUEID}.pdf);
 		exten => s,n,Set(CDR(userfield)=ReceiveFAX);*/
 		  $ext->add($context, $exten, '', new ext_noop('PT1C START'));
-		  $ext->add($context, $exten, '', new ext_set('CDR(recordingfile)','${ASTSPOOLDIR}/fax/${UNIQUEID}.pdf'));
+		  $ext->add($context, $exten, '', new ext_set('CDR(recordingfile)','${UNIQUEID}.pdf'));
 		  $ext->add($context, $exten, '', new ext_set('CDR(userfield)','ReceiveFAX'));
 		  $ext->add($context, $exten, '', new ext_noop('PT1C END'));
 		/*; PT1C ; END  */
